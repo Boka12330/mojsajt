@@ -1,0 +1,136 @@
+https://ordinacijapavlovic.000webhostapp.com/
+
+
+
+
+
+<div class="aboutus">
+            <div class="container">
+              <div class="row">
+                    <h2 class="text-center mb-lg-5 mb-4">Naš tim</h2>                        
+                <div class="col-md-4 ">
+                  <div class="about-us-tim">
+                    <div id="galerija" ></div> 
+                </div>
+                
+                </div>
+              </div>
+            </div>
+          </div> 
+		  
+		  
+var nizSrc=["assets/images/doktorcopy.jpg","assets/images/med_sestracopy1.jpg","assets/images/anacopy.jpg"];
+var nizAlt=["doktor", "med_sestra", "med_sestra"];
+var nizH4=["dr Bojan Pavlović","med. sestra Jana Ilić", "med. sestra Ana Milić"]
+
+var ispis=""
+for(let i=0; i<nizAlt.length;i++){
+	ispis+=`<div class="slika">
+	<img src="${nizSrc[i]}" alt="${nizAlt[i]} class="img-fluid"/>
+	<h4>${nizH4[i]} <h4>
+	</div>`
+}
+document.querySelector("#galerija").innerHTML=ispis;
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div class="container">
+    
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+ <section id="works">
+   <div class="container wow fadeInUp">
+      <div class="row">
+        <div class="col-md-12">
+          <h3 class="section-title">Popular works</h3>
+          <div class="section-title-divider"></div>
+          <p class="section-description">This museum contains one of the richest art collections in the world</p>
+        </div>
+      </div>
+
+      <div class="row" id="workss">
+      </div>
+    </div>
+  </section>
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  var srcWorks=["img/MonaLisa.jpg","img/AmorPsiha.jpg","img/Pisar.jpg","img/HamurabijevZakonik.jpg"];
+var altWorks=["Mona Lisa in Louvre","Sculpture in a museum (Louvre)","A clerk from Saqqara","Hammurabi's Code in museum",];
+var h4Works=["Mona Lisa","Love and psyche","Clerk from Saqqara","Hammurabi's Code"];
+var spanWorks=["Leonardo da Vinci","Antonio Canova","The third dynasty of ancient Egypt","Hammurabi(the seventh ruler)"];
+var spanID=["fade1","fade2","fade3","fade4"];
+var spanValue=["It is made with the oil technique on a wooden board made of poplar. It presents a portrait of a young Florentine lady, Lisa del Giocondo.","The supremacy of Antonio Canova from the 1970s onwards established the dominance of the neoclassical model in sculpture for the next hundred years.","The statue of the scribe is one of the most beautiful known masterpieces of sculpture of ancient Egypt","Hammurabi's Code is the best-preserved code of ancient Mesopotamia from 1754 BC"];
+var spanBtn=["btn1","btn2","btn3","btn4"];
+var worksID=document.getElementById("workss");
+
+for(i=0;i<srcWorks.length; i++){
+
+var worksDiv2=document.createElement("div");
+worksDiv2.classList.add("col-md-3");
+worksID.appendChild(worksDiv2);
+
+var worksDiv3=document.createElement("div");
+worksDiv3.classList.add("member");
+worksDiv2.appendChild(worksDiv3);
+
+var worksDiv4=document.createElement("div");
+worksDiv4.classList.add("pic");
+worksDiv3.appendChild(worksDiv4);
+
+
+var divImg=document.createElement("img");
+divImg.setAttribute("src", srcWorks[i]);
+divImg.setAttribute("alt", altWorks[i]);
+worksDiv4.appendChild(divImg);
+
+var worksH4=document.createElement("h4");
+var worksH4T=document.createTextNode(h4Works[i]);
+worksH4.appendChild(worksH4T);
+worksDiv3.appendChild(worksH4);
+
+var spanWorkss=document.createElement("span");
+var spanWorkssT=document.createTextNode(spanWorks[i]);
+spanWorkss.appendChild(spanWorkssT);
+worksDiv3.appendChild(spanWorkss);
+
+var spanPTag=document.createElement("p");
+spanPTag.setAttribute("id",spanID[i]);
+var spanPT=document.createTextNode(spanValue[i]);
+spanPTag.appendChild(spanPT);
+spanWorkss.appendChild(spanPTag);
+
+var spanBtnn=document.createElement("p");
+spanBtnn.setAttribute("id",spanBtn[i]);
+var textBtn=document.createTextNode("-click me-");
+spanBtnn.appendChild(textBtn);
+spanWorkss.appendChild(spanBtnn);
+}
